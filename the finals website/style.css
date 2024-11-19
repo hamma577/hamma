@@ -1,0 +1,427 @@
+/* General Styles */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background: #0d0d0d;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background: #1a1a1a;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header .logo a {
+    font-size: 2rem;
+    color: #ffbe0b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffbe0b;
+    transform: scale(1.1);
+}
+
+header nav ul li a.mods-link {
+    color: #ffbe0b;  /* Special color for Game Mods link */
+    font-weight: bold;
+}
+
+header nav ul li a.mods-link:hover {
+    color: #ff8a00;
+}
+.leaderboard {
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.leaderboard h2 {
+    font-size: 2.5rem;
+    color: #ffbe0b;
+    margin-bottom: 20px;
+}
+
+.leaderboard {
+    margin-bottom: 30px;
+}
+
+.leaderboard {
+    width: 100%; /* Makes the image take up the full width of the container */
+    max-width: 800px; /* You can set a max width for the image */
+    height: auto;
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ffbe0b;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #444;
+}
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ffbe0b;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #444;
+}
+
+
+/* Home Section */
+.home {
+    height: 100vh;
+    background: url('1344124.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: zoomIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #ffbe0b;
+    text-shadow: 4px 4px 10px black, 0 0 20px #ffbe0b;
+}
+
+.hero .tagline {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero .button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    color: black;
+    background: linear-gradient(45deg, #ffbe0b, #ff006e);
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.hero .button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 110, 0.7);
+}
+
+/* Features Section */
+.features {
+    background: #2c2c2c;
+    padding: 50px 20px;
+    display: none;  /* Initially hidden */
+    animation: slideInFromTop 1.5s ease-in-out forwards;
+}
+
+.features .feature-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffbe0b;
+    text-shadow: 2px 2px 5px black;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Show features section when clicked */
+#features:target {
+    display: block; /* Display the section when the anchor link is clicked */
+}
+/* Gallery Section */
+.gallery {
+    background: #1a1a1a;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffbe0b;
+    text-shadow: 2px 2px 5px black;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 0, 110, 0.7);
+}
+
+/* Animation for Gallery */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.game-modes {
+    background: #1a1a1a;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.game-modes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffbe0b;
+}
+
+.mode {
+    background: #333;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.mode:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 110, 0.7);
+}
+
+.mode h3 {
+    font-size: 1.8rem;
+    color: #ffbe0b;
+}
+
+.mode p {
+    font-size: 1rem;
+}
+.testimonials {
+    background: #2c2c2c;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffbe0b;
+}
+
+.testimonial {
+    background: #444;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ffbe0b;
+}
+.news {
+    background: #111;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.news h2 {
+    font-size: 2.5rem;
+    color: #ffbe0b;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #222;
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    color: #ffbe0b;
+}
+
+.news-item p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+.gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.quiz {
+    background: #222;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.quiz h2 {
+    font-size: 2.5rem;
+    color: #ffbe0b;
+    margin-bottom: 20px;
+}
+
+.question {
+    margin: 20px auto;
+}
+
+.question p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.question button {
+    background: #ffbe0b;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.question button:hover {
+    background: #ff8a00;
+}
+
